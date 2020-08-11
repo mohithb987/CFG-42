@@ -1,0 +1,169 @@
+<ng-container *ngIf="!role">
+    <h1>Welcome To KFE Home Page</h1>
+</ng-container>
+
+<ng-container *ngIf="role === '0'">
+    <!-- <ng-container> -->
+    <div id="teacherHome">
+        <h2 class="text-center">Welcome Teacher</h2>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <i class="fas fa-cogs card-img-top fa-5x"></i>
+                        <div class="card-body">
+                          <h5 class="card-title">Training Modules</h5>
+                          <a href="/viewModules" class="btn btn-primary">Train</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <i class="fas fa-file-alt card-img-top fa-5x"></i>
+                        <div class="card-body">
+                          <h5 class="card-title">Test Yoursef</h5>
+                          <a href="/test" class="btn btn-primary">Go</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <i class="fas fa-user card-img-top fa-5x"></i>
+                        <div class="card-body">
+                          <h5 class="card-title">Student Assesment</h5>
+                          <a href="/signup" class="btn btn-primary">Asess</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <i class="fas fa-question-circle card-img-top fa-5x"></i>
+                        <div class="card-body">
+                          <h5 class="card-title">Your Queries</h5>
+                          <a href="/createQuery" class="btn btn-primary">Go</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <i class="fas fa-file-upload card-img-top fa-5x"></i>
+                        <div class="card-body">
+                          <h5 class="card-title">Upload Additional Content</h5>
+                          <a href="/home" class="btn btn-primary">Upload</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</ng-container>
+
+<ng-container *ngIf="role === '1'">
+    <!-- <ng-container> -->
+    <div id="schoolHome">
+        <div class="text-center">
+            <h2 >Welcome School</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <i class="fas fa-cogs card-img-top fa-5x"></i>
+                            <div class="card-body">
+                              <h5 class="card-title">View Training models</h5>
+                              <a href="/viewModules" class="btn btn-primary">View</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <i class="fas fa-chalkboard-teacher card-img-top fa-5x"></i>
+                            <div class="card-body">
+                              <h5 class="card-title">Add a teacher</h5>
+                              <a href="/signup" class="btn btn-primary">register</a>
+                            </div>
+                          </div> 
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <i class="fas fa-user card-img-top fa-5x"></i>
+                            <div class="card-body">
+                              <h5 class="card-title">View Students Details</h5>
+                              <a href="/student" class="btn btn-primary">View</a>
+                            </div>
+                          </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</ng-container>
+
+<ng-container *ngIf="role === '2'">
+    <!-- <ng-container> -->
+    <div id="employeeHome">
+        <div class="text-center">
+            <h2>Welcome Employee</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <i class="fas fa-school card-img-top fa-5x"></i>
+                            <div class="card-body">
+                              <h5 class="card-title">Register School</h5>
+                              <a href="/signup" class="btn btn-primary">Register</a>
+                            </div>
+                          </div> 
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <i class="fas fa-cogs card-img-top fa-5x"></i>
+                            <div class="card-body">
+                              <h5 class="card-title">Add Training Categories</h5>
+                              <a href="/categories" class="btn btn-primary">Add</a>
+                            </div>
+                          </div> 
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <i class="fas fa-file-alt card-img-top fa-5x"></i>
+                            <div class="card-body">
+                              <h5 class="card-title">Add Training Modules</h5>
+                              <a href="/addModules" class="btn btn-primary">Add</a>
+                            </div>
+                          </div> 
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <i class="fas fa-question-circle card-img-top fa-5x"></i>
+                            <div class="card-body">
+                              <h5 class="card-title">Check Queries</h5>
+                              <a href="/createQuery" class="btn btn-primary">Query</a>
+                            </div>
+                          </div> 
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <i class="fas fa-table card-img-top fa-5x"></i>
+                            <div class="card-body">
+                              <h5 class="card-title">View School Data</h5>
+                              <a href="/schools" class="btn btn-primary">View</a>
+                            </div>
+                          </div> 
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <i class="fas fa-file-alt card-img-top fa-5x"></i>
+                            <div class="card-body">
+                              <h5 class="card-title">Add Tests</h5>
+                              <a href="/home" class="btn btn-primary">Add</a>
+                            </div>
+                          </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

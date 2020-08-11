@@ -1,0 +1,317 @@
+<ng-container *ngIf="!role">
+  <div id="content">
+    <div class="card mx-auto">
+      <form name="myForm" #ref="ngForm" (ngSubmit)="submitForm(ref)">
+        
+        <div class="card-body">
+          <h1 class="card-title text-center">Register</h1>
+          <div class="card-text">
+            <div class="form-group row">
+              <div class="form-group col-md-3">
+                <label class="col-form-label">Name</label>
+              </div>
+              <div class="form-group col-md-9">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form-control"
+                  ngModel
+                  required
+                />
+              </div>
+                <div class="form-group col-md-3">
+                  <label for="email" class="col-form-label">Email</label>
+                </div>
+                <div class="form-group col-md-9">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    ngModel
+                  />
+                </div>
+
+              <div class="form-group col-md-3">
+                <label for="n" class="col-form-label">Password</label>
+              </div>
+              <div class="form-group col-md-9">
+                <input
+                  type="password"
+                  name="password"
+                  id="n"
+                  class="form-control"
+                  ngModel
+                />
+              </div>
+              <div class="form-group col-md-3">
+                <label for="n" class="col-form-label">Phone</label>
+              </div>
+              <div class="form-group col-md-9">
+                <input
+                  type="string"
+                  name="phone"
+                  id="n"
+                  class="form-control"
+                  ngModel
+                />
+              </div>
+              
+              <div class="col-md-3"></div>
+            </div>
+          </div>
+            <div class="card-text">
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary" id="register-btn">
+                Register
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="role === '0'">
+  <div id="content">
+    <div class="card mx-auto">
+      <form name="myForm" #ref="ngForm" (ngSubmit)="submitStudentForm(ref)">
+        
+        <div class="card-body">
+          <h1 class="card-title text-center">Student Register</h1>
+          <div class="card-text">
+            <div class="form-group row">
+              <div class="form-group col-md-3">
+                <label class="col-form-label">Student Name</label>
+              </div>
+              <div class="form-group col-md-9">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form-control"
+                  ngModel
+                  required
+                />
+              </div>
+                <div class="form-group col-md-3">
+                  <label class="col-form-label">Roll Number</label>
+                </div>
+                <div class="form-group col-md-9">
+                  <input
+                    type="text"
+                    name="student_id"
+                    id="student_id"
+                    class="form-control"
+                    ngModel
+                  />
+                </div>
+
+              <div class="form-group col-md-3">
+                <label class="col-form-label">Class</label>
+              </div>
+              <div class="form-group col-md-9">
+                <input
+                  type="number"
+                  name="class"
+                  id="class"
+                  class="form-control"
+                  ngModel
+                />
+              </div>
+              <div class="form-group col-md-3">
+                <label class="col-form-label">Section</label>
+              </div>
+              <div class="form-group col-md-9">
+                <input
+                  type="string"
+                  name="section"
+                  id="section"
+                  class="form-control"
+                  ngModel
+                />
+              </div>
+
+              <div class="form-group col-md-3">
+                <label class="col-form-label">Percentage</label>
+              </div>
+              <div class="form-group col-md-9">
+                <input
+                  type="string"
+                  name="percentage"
+                  id="percentage"
+                  class="form-control"
+                  ngModel
+                />
+              </div>
+              
+              <div class="col-md-3"></div>
+            </div>
+          </div>
+            <div class="card-text">
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary" id="register-btn">
+                Register
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="role === '1'">
+  <div id="content">
+    <div class="card mx-auto">
+      <form name="myForm" #ref="ngForm" (ngSubmit)="submitTeacherForm(ref)">
+        
+        <div class="card-body">
+          <h1 class="card-title text-center">Teacher Register</h1>
+          <div class="card-text">
+            <div class="form-group row">
+              <div class="form-group col-md-3">
+                <label class="col-form-label">Name</label>
+              </div>
+              <div class="form-group col-md-9">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form-control"
+                  ngModel
+                  required
+                />
+              </div>
+                <div class="form-group col-md-3">
+                  <label for="email" class="col-form-label">Email</label>
+                </div>
+                <div class="form-group col-md-9">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    ngModel
+                  />
+                </div>
+
+              <div class="form-group col-md-3">
+                <label for="n" class="col-form-label">Password</label>
+              </div>
+              <div class="form-group col-md-9">
+                <input
+                  type="password"
+                  name="password"
+                  id="n"
+                  class="form-control"
+                  ngModel
+                />
+              </div>
+              <div class="form-group col-md-3">
+                <label class="col-form-label">Phone</label>
+              </div>
+              <div class="form-group col-md-9">
+                <input
+                  type="string"
+                  name="phone"
+                  id="phone"
+                  class="form-control"
+                  ngModel
+                />
+              </div>
+              
+              <div class="col-md-3"></div>
+            </div>
+          </div>
+            <div class="card-text">
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary" id="register-btn">
+                Register
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="role === '2'">
+  <!-- <ng-container> -->
+    <div id="content">
+      <div class="card mx-auto">
+        <form name="myForm" #ref="ngForm" (ngSubmit)="submitSchoolForm(ref)">
+          
+          <div class="card-body">
+            <h1 class="card-title text-center">School Register</h1>
+            <div class="card-text">
+              <div class="form-group row">
+                <div class="form-group col-md-3">
+                  <label class="col-form-label">Name of School</label>
+                </div>
+                <div class="form-group col-md-9">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control"
+                    ngModel
+                    required
+                  />
+                </div>
+                  <div class="form-group col-md-3">
+                    <label for="email" class="col-form-label">Email</label>
+                  </div>
+                  <div class="form-group col-md-9">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      class="form-control"
+                      ngModel
+                    />
+                  </div>
+  
+                <div class="form-group col-md-3">
+                  <label for="n" class="col-form-label">Password</label>
+                </div>
+                <div class="form-group col-md-9">
+                  <input
+                    type="password"
+                    name="password"
+                    id="n"
+                    class="form-control"
+                    ngModel
+                  />
+                </div>
+                <div class="form-group col-md-3">
+                  <label class="col-form-label">Phone</label>
+                </div>
+                <div class="form-group col-md-9">
+                  <input
+                    type="string"
+                    name="phone"
+                    id="phone"
+                    class="form-control"
+                    ngModel
+                  />
+                </div>
+                
+                <div class="col-md-3"></div>
+              </div>
+            </div>
+              <div class="card-text">
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary" id="register-btn">
+                  Register
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+    </div>
+</ng-container>

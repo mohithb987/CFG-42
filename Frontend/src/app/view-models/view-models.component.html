@@ -1,0 +1,31 @@
+<ng-container *ngIf="role">
+    <div class="text-center">
+        <h2>Available Training Modules : {{contents.length}}</h2>
+        <div class="container">
+            <div class="row">
+                <ng-container *ngFor="let content of contents">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                              <h1 class="card-title" style="font-weight: 700; color: green;">{{ getCategory(content._id)}}</h1>
+                              <div class="card-body">
+                                <h2 style="font-weight: 700; color: green;">{{ content.name}}</h2>  
+                                <h5>{{ content.description }}</h5>
+                                <a href="content.url"><h5>{{  content.url }}</h5></a>
+                              </div>
+                            
+                                </div>
+                                <ng-container *ngIf="role === '0'">
+                                    <button type="button" class="btn btn-primary">Mark as Completed</button>
+                                </ng-container>
+                                </div>
+                            
+                            
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+

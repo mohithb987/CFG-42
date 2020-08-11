@@ -1,0 +1,15 @@
+.row{
+    padding-top: 20px;
+}
+input{
+    width: 50%;
+    margin: auto;
+}
+
+.card{
+    margin: 10px auto;
+}
+
+textarea{
+    margin: 25px;
+}

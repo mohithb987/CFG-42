@@ -1,0 +1,22 @@
+<div class="text-center">
+    <h2>Students Asessed</h2>
+    <div class="container">
+        <div class="row">
+            <ng-container *ngFor="let student of students">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ student.name}}</h5>
+                          <div class="card-body">
+                            <h5>Class : {{ student.class}}</h5>  
+                            <h5>Section :{{ student.section }}</h5>
+                            <h5>Percentage: {{ student.percentage }}%</h5>
+                          </div>
+                                                 
+                        </div>
+                      </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

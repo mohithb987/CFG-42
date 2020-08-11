@@ -1,0 +1,21 @@
+<div class="text-center">
+    <h2>List of Partenered Schools</h2>
+    <div class="container">
+        <div class="row">
+            <ng-container *ngFor="let school of schools">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ school.name}}</h5>
+                          <div class="card-body">
+                            <h5>{{ school.phone}}</h5>  
+                            <h5>{{ school.email }}</h5>
+                          </div>
+                                                 
+                        </div>
+                      </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

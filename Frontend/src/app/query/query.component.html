@@ -1,0 +1,80 @@
+<ng-container *ngIf="role === '0'">
+    <div class="text-center">
+        <div class="form-group">
+            <h2><label class="col-form-label">Enter Your Query</label></h2>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              name="description"
+              id="description"
+              #description
+              class="form-control"
+              ngModel
+            />
+          </div>
+          <div>
+            <a href="/home">
+                <button type="button" class="btn btn-primary" (click)="addQuery(description.value)">Add Query</button>
+            </a>
+          </div>
+    </div>
+    
+    <div class="text-center">
+        <div class="container">
+            <div class="row">
+                <ng-container *ngFor="let query of queries">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">{{ query.description}}</h5>
+                              <ng-container *ngIf="!query.response">
+                                <span>Our Employee will get back soon!</span>
+                              </ng-container>
+                              <ng-container *ngIf="query.response">
+                                <span style=" color: #15a015; font-weight: 700;">{{ query.response}} </span>
+                              </ng-container>
+                              
+                            </div>
+                          </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="role === '2'">
+    <h2 class="text-center">Teacher Queries</h2>   
+    <div class="text-center">
+        <div class="container">
+            <div class="row">
+                <ng-container *ngFor="let query of queries">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">{{ query.description}}</h5>
+                              <ng-container *ngIf="!query.response">
+                                <span>
+                                      <textarea id="respnse" name="reponse" rows="4" cols="25" #response ngModel placeholder="Enter your response">
+                                        </textarea>
+                                      <div>
+                                        <a href="/createQuery">
+                                            <button type="button" class="btn btn-primary" (click)="addResponse(response.value, query._id)">Post Response</button>
+                                        </a>
+                                      </div>
+                                </span>
+                              </ng-container>
+                              <ng-container *ngIf="query.response">
+                                <span  style=" color: #15a015; font-weight: 700;">{{ query.response }}</span>
+                              </ng-container>
+                              
+                            </div>
+                          </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div> 
+
+</ng-container>
